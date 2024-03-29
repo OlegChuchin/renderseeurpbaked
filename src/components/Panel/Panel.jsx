@@ -24,10 +24,10 @@ const Panel = () => {
         document.body.dispatchEvent(new CustomEvent(name, { detail: { [name]: param } }));
     };
 
-    const changeLight = (e) => {
-        const { name, value } = e.target;
-        changeProp(name, value);
-    };
+    // const changeLight = (e) => {
+    //     const { name, value } = e.target;
+    //     changeProp(name, value);
+    // };
 
     const setColor = (e) => {
         const { name, value } = e.target;
