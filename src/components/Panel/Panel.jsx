@@ -75,6 +75,11 @@ const Panel = () => {
                 />
             </div> */}
             <div className={s.prop}>
+                <button type="button" onClick={() => changeProp("toggleLight", null)}>
+                    Turn on/off the light
+                </button>
+            </div>
+            <div className={s.prop}>
                 <p>Color</p>
                 <ul className={s.colorList}>
                     {colors.map((color) => (

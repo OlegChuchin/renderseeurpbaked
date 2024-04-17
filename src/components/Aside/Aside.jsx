@@ -39,6 +39,13 @@ const Aside = ({ functions }) => {
         [sendMessage]
     );
 
+    const toggleLight = useCallback(
+        (event) => {
+            sendMessage("RoomController", "toggleLight");
+        },
+        [sendMessage]
+    );
+
     // const setSun = useCallback(
     //     (event) => {
     //         const { ambient } = event.detail;
@@ -61,6 +68,7 @@ const Aside = ({ functions }) => {
         document.body.addEventListener("intensity", setIntensity);
         document.body.addEventListener("texture", setTexture);
         document.body.addEventListener("ambient", setAmbient);
+        document.body.addEventListener("toggleLight", toggleLight);
         window.addEventListener("keydown", toggleMenu);
         addEventListener("picker", setName);
         return () => {
@@ -68,10 +76,11 @@ const Aside = ({ functions }) => {
             document.body.removeEventListener("intensity", setIntensity);
             document.body.removeEventListener("texture", setTexture);
             document.body.removeEventListener("ambient", setAmbient);
+            document.body.removeEventListener("toggleLight", toggleLight);
             window.removeEventListener("keydown", toggleMenu);
             removeEventListener("picker", setName);
         };
-    }, [setColor, setTexture, setName, toggleMenu, setIntensity, setAmbient]);
+    }, [setColor, setTexture, setName, toggleMenu, setIntensity, setAmbient, toggleLight]);
 
     return (
         <aside className={showMenu ? s.asideActive : s.aside}>
