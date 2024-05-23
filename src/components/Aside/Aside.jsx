@@ -100,6 +100,11 @@ const Aside = ({ functions }) => {
                     “Left Shift”, “A”, “Left Ctrl”, “D” keys.
                 </p>
                 <p>Zoom: mouse wheel or "W", "S" keys.</p>
+                <p>
+                    <Br />
+                    <Br />
+                    ** urp_kit **
+                </p>
             </div>
         </aside>
     );
