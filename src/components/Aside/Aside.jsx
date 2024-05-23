@@ -101,8 +101,8 @@ const Aside = ({ functions }) => {
                 </p>
                 <p>Zoom: mouse wheel or "W", "S" keys.</p>
                 <p>
-                    <Br />
-                    <Br />
+                    <br />
+                    <br />
                     ** urp_kit **
                 </p>
             </div>
